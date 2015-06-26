@@ -97,6 +97,7 @@ static NSInteger const MTDateConstantHoursInDay        = 24;
 + (NSDate *)mt_dateFromYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day;
 + (NSDate *)mt_dateFromYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour minute:(NSInteger)minute;
 + (NSDate *)mt_dateFromYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour minute:(NSInteger)minute second:(NSInteger)second;
++ (NSDate *)mt_dateFromYear:(NSInteger)year week:(NSInteger)week;
 + (NSDate *)mt_dateFromYear:(NSInteger)year week:(NSInteger)week weekday:(NSInteger)weekday;
 + (NSDate *)mt_dateFromYear:(NSInteger)year week:(NSInteger)week weekday:(NSInteger)weekday hour:(NSInteger)hour minute:(NSInteger)minute;
 + (NSDate *)mt_dateFromYear:(NSInteger)year week:(NSInteger)week weekday:(NSInteger)weekday hour:(NSInteger)hour minute:(NSInteger)minute second:(NSInteger)second;
@@ -124,6 +125,7 @@ static NSInteger const MTDateConstantHoursInDay        = 24;
 #pragma mark - COMPONENTS
 
 - (NSInteger)mt_year;
+- (NSInteger)mt_yearForWeekOfYear;
 - (NSInteger)mt_weekOfYear;
 - (NSInteger)mt_dayOfYear;
 - (NSInteger)mt_weekdayOfWeek;
