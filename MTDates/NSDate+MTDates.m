@@ -215,7 +215,6 @@ static NSDateFormatterStyle         __timeStyle             = NSDateFormatterSho
 {
     [[NSDate sharedRecursiveLock] lock];
     NSDateComponents *comps = [NSDate mt_components];
-    NSLog(@"year: %d   week: %d   __weekNumberingSystem %d  __firstWeekday: %d", year, week, __weekNumberingSystem, __firstWeekday);
 
     [comps setYear:year];
     [comps setWeekday:5];
@@ -228,7 +227,7 @@ static NSDateFormatterStyle         __timeStyle             = NSDateFormatterSho
 //    weekdayOrdinal
     NSDate *date = [[NSDate mt_calendar] dateFromComponents:comps];
     
-    NSLog(@"date: %@ ", date);
+//    NSLog(@"date: %@ ", date);
     
     [[NSDate sharedRecursiveLock] unlock];
     return date;
