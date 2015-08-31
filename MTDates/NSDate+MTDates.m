@@ -215,20 +215,11 @@ static NSDateFormatterStyle         __timeStyle             = NSDateFormatterSho
 {
     [[NSDate sharedRecursiveLock] lock];
     NSDateComponents *comps = [NSDate mt_components];
-
     [comps setYear:year];
-    [comps setWeekday:5];
-    [comps setHour:0];
-    [comps setMinute:0];
-    [comps setSecond:0];
+    [comps setWeekday:__firstWeekday];
     [comps setWeekOfYear:week];
     [comps setYearForWeekOfYear:year];
-    //    [comps setWeekdayOrdinal:1];
-//    weekdayOrdinal
     NSDate *date = [[NSDate mt_calendar] dateFromComponents:comps];
-    
-//    NSLog(@"date: %@ ", date);
-    
     [[NSDate sharedRecursiveLock] unlock];
     return date;
 }
